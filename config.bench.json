@@ -1,0 +1,8 @@
+{
+  "links": [
+    {"name": "wifi", "robot_host": "127.0.0.1", "port": 5555},
+    {"name": "radio", "enabled": false}
+  ],
+  "drive": {"esc_arm_seconds": 0.2},
+  "telemetry": {"log_path": "", "imu_enabled": false}
+}
