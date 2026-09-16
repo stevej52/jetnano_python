@@ -6,9 +6,9 @@ to HC-12 radios and fail-safes that stop the robot when control is lost.
 This is a rewrite of the original `drivenano.py`, `pijoy.py` and
 `sync_server.py` scripts from this repository. Same intent and same hardware,
 new structure: one small package (`jetnano_control`), a program for each end,
-tests that run without a robot. The original scripts are still in the history
-under the `legacy-scripts` tag:
-https://github.com/stevej52/jetnano_python/tree/legacy-scripts
+tests that run without a robot. The original scripts are still in the
+history; browse them at the last commit before the rewrite:
+https://github.com/stevej52/jetnano_python/tree/7c850efb5fde13f9d79c798a0ce4b0c410fb91b1
 
 ```
   operator (Pi or PC)                          robot (Jetson Nano)
