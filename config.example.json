@@ -1,0 +1,141 @@
+{
+  "links": [
+    {
+      "type": "udp",
+      "name": "wifi",
+      "priority": 1,
+      "enabled": true,
+      "robot_host": "192.168.0.201",
+      "port": 5555,
+      "bind_host": "0.0.0.0",
+      "tx_port": "",
+      "rx_port": "",
+      "baudrate": 9600,
+      "unit_id": 1,
+      "base_address": 128,
+      "timeout_s": 1.0,
+      "max_send_hz": 50.0
+    },
+    {
+      "type": "serial",
+      "name": "radio",
+      "priority": 3,
+      "enabled": true,
+      "robot_host": "",
+      "port": 0,
+      "bind_host": "0.0.0.0",
+      "tx_port": "/dev/serial0",
+      "rx_port": "/dev/ttyTHS1",
+      "baudrate": 9600,
+      "unit_id": 1,
+      "base_address": 128,
+      "timeout_s": 1.0,
+      "max_send_hz": 15.0
+    },
+    {
+      "type": "modbus",
+      "name": "modbus",
+      "priority": 2,
+      "enabled": false,
+      "robot_host": "192.168.0.201",
+      "port": 5020,
+      "bind_host": "0.0.0.0",
+      "tx_port": "",
+      "rx_port": "",
+      "baudrate": 9600,
+      "unit_id": 1,
+      "base_address": 128,
+      "timeout_s": 1.0,
+      "max_send_hz": 20.0
+    }
+  ],
+  "drive": {
+    "throttle": {
+      "channel": 0,
+      "center": 90.0,
+      "minimum": 65.0,
+      "maximum": 125.0,
+      "reverse": false
+    },
+    "steer_front": {
+      "channel": 1,
+      "center": 85.0,
+      "minimum": 30.0,
+      "maximum": 135.0,
+      "reverse": false
+    },
+    "steer_rear": {
+      "channel": 2,
+      "center": 85.0,
+      "minimum": 30.0,
+      "maximum": 135.0,
+      "reverse": true
+    },
+    "four_wheel_steering": true,
+    "throttle_axis": 3,
+    "steer_axis": 2,
+    "invert_throttle": false,
+    "invert_steer": false,
+    "throttle_limit": 0.6,
+    "turbo_limit": 1.0,
+    "throttle_slew_per_s": 2.0,
+    "pwm_frequency": 100,
+    "pca_address": 64,
+    "esc_arm_seconds": 1.0
+  },
+  "joystick": {
+    "name_contains": "",
+    "axes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "invert": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "deadzone": 0.05,
+    "calibrate_rest": true,
+    "arm_button": 0,
+    "estop_button": -1,
+    "turbo_button": -1,
+    "reattach_interval_s": 1.0
+  },
+  "receiver": {
+    "control_rate_hz": 50.0,
+    "fresh_for_s": 0.5,
+    "status_interval_s": 1.0
+  },
+  "transmitter": {
+    "rate_hz": 50.0,
+    "status_print_interval_s": 2.0,
+    "shutdown_frames": 5
+  },
+  "telemetry": {
+    "enabled": true,
+    "interval_s": 3.0,
+    "log_path": "~/logs/jetnano-telemetry.log",
+    "max_bytes": 1000000,
+    "backup_count": 5,
+    "imu_enabled": true
+  },
+  "obstacle": {
+    "enabled": false,
+    "stop_distance_m": 0.5,
+    "min_valid_m": 0.15,
+    "sample_step": 20,
+    "row_range": [
+      100,
+      400
+    ],
+    "col_range": [
+      100,
+      540
+    ],
+    "stale_after_s": 1.0,
+    "retry_s": 10.0
+  }
+}
